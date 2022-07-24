@@ -1,6 +1,8 @@
 /* Bordered form */
 form {
-  border: 3px solid #f1f1f1;
+  border: 3px solid white;
+  background-color: rgb(122, 46, 46);
+  color: white;
 }
 
 /* Full-width inputs */
@@ -9,14 +11,14 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
-  color: white;
+  background-color :#9a4b4b;
+  color:black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -33,7 +35,8 @@ button:hover {
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color:#9a4b4b;
+  color:beige;
 }
 
 /* Center the avatar image inside this container */
@@ -57,6 +60,7 @@ img.avatar {
 span.psw {
   float: right;
   padding-top: 16px;
+  color: blue;
 }
 
 /* Change styles for span and cancel button on extra small screens */
