@@ -1,8 +1,8 @@
 /* Bordered form */
 form {
   border: 3px solid white;
-  background-color: rgb(122, 46, 46);
-  color: white;
+  background-color: rgb(37, 84, 99);
+  color: black;
 }
 
 /* Full-width inputs */
@@ -17,13 +17,14 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color :#9a4b4b;
+  background-color :white;
   color:black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  border: 1px solid black;
 }
 
 /* Add a hover effect for buttons */
@@ -35,8 +36,8 @@ button:hover {
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
-  background-color:#9a4b4b;
-  color:beige;
+  background-color: rgb(37, 84, 99);
+  color:black;
 }
 
 /* Center the avatar image inside this container */
