@@ -12,6 +12,32 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.post('/login', async (req, res) => {
+  console.log(req.body.email);
+  console.log(req.body.psw);
+
+  try {
+    const user = await User.findOne({ 
+      email: req.body.email
+    });
+    console.log(user);
+    if(user) {
+      if(user.password == req.body.psw) {
+        res.send("Login successfull");
+      }else {
+        res.send('Invalid password');
+        }
+
+    }else {
+      res.send('Invalid email id');
+      }
+  } catch (err) {
+    console.log(err);
+    res.send("Server error");
+  }
+
+});
+
 router.get('/signup', (req, res) => {
   res.render('signup');
 });
