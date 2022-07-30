@@ -13,17 +13,19 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-  console.log(req.body.email);
-  console.log(req.body.psw);
+  //console.log(req.body.email);
+ // console.log(req.body.psw);
 
-  try {
+  try { 
     const user = await User.findOne({ 
       email: req.body.email
     });
-    console.log(user);
+   //
+   console.log(user);
     if(user) {
       if(user.password == req.body.psw) {
-        res.send("Login successfull");
+        //res.send("Login successfull");
+        res.render('template');
       }else {
         res.send('Invalid password');
         }
@@ -52,12 +54,18 @@ router.post('/signup', async (req, res) => {
       password: req.body.psw
     });
     await newUser.save()
-    res.send("Signup successfull");
+    //res.send("Signup successfull");
+    res.render('template');
   } catch (err) {
     console.log(err);
     res.send("Server error");
   }
 
 });
+
+router.get('/temp1', (req, res) => {
+res.render('form')
+});
+
 
 module.exports = router;
